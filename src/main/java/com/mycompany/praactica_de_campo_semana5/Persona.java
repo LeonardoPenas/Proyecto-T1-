@@ -10,5 +10,7 @@ package com.mycompany.praactica_de_campo_semana5;
  */
 public class Persona 
 {
-    
+    private String Nombre;
+    private String Apellidos;
+    private String dni;
 }
