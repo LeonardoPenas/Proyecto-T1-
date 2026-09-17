@@ -8,6 +8,6 @@ package com.mycompany.praactica_de_campo_semana5;
  *
  * @author leoch
  */
-public class PersonaController {
-    
+public class PersonaController 
+{
 }
