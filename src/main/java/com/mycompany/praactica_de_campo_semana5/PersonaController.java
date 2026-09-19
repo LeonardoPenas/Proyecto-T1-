@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 public class PersonaController 
 {
-    ArrayList<Persona> lista_persona=new ArrayList();
+    ArrayList<Persona> lista_persona= new ArrayList();
     void agregar_persona(Persona nuevaPersona)
     {
         System.out.println("SE AGREGO PERSONA");

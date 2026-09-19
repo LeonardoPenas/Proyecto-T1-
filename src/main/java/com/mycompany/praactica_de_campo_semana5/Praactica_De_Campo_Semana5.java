@@ -16,5 +16,14 @@ public class Praactica_De_Campo_Semana5 {
         Persona p = new Persona();
         p.VerDatos();
         
+        Persona p1= new Persona("Leonardo","Chavez","12121212");
+        p1.VerDatos();
+
+        Persona p2 =new  Persona("Fabiana","Valencia","90901912","90909090");
+        p2.VerDatos();
+
+
+
+        
     }
 }
