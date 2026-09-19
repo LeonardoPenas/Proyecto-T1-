@@ -4,10 +4,28 @@
  */
 package com.mycompany.praactica_de_campo_semana5;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author leoch
  */
 public class PersonaController 
 {
+    ArrayList<Persona> lista_persona=new ArrayList();
+    void agregar_persona(Persona nuevaPersona)
+    {
+        System.out.println("SE AGREGO PERSONA");
+        lista_persona.add(nuevaPersona);
+    }
+    
+    void listar_alumno()
+    {
+        System.out.println("Los alumnos de la lista son: ");
+        Persona  actual;
+        for (int i = 0; i < lista_persona.size(); i++) {
+            actual=lista_persona.get(i);
+            actual.VerDatos();
+        }
+    }
 }
