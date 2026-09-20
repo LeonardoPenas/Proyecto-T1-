@@ -22,7 +22,9 @@ public class Praactica_De_Campo_Semana5 {
         while (rpta.equals("s"))
         {
             
-            Persona p = new  Persona();
+            try 
+            {
+             Persona p = new  Persona();
             System.out.println("INGRESE NOMBRE DE PERSONA: ");
             String nom = sc.nextLine();
             p.setNombre(nom);
@@ -38,8 +40,21 @@ public class Praactica_De_Campo_Semana5 {
             System.out.println("INGRESE DNI: ");
             String dni =sc.nextLine();
             p.setDni(dni);
+
+            try 
+            {
+                System.out.println("INGRESE EDAD: ");
+                int edad = Integer.parseInt(sc.nextLine());
+                p.setedad(edad);   
+            } catch (NumberFormatException e) {
+                System.out.println("ERROR: la edad debe ser un numero entero");
+            }
            
-            controla.agregar_persona(p);
+            controla.agregar_persona(p);   
+            } catch (IllegalArgumentException e) {
+                System.out.println("ERROR: " + e.getMessage());
+                System.out.println("La persona NO fue registrada");
+            }
             System.out.println("DESEA AÑADIR MÁS TRABAJADORES?");
             rpta=sc.nextLine();
         }

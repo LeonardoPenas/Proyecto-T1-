@@ -15,6 +15,7 @@ public class Persona
     private String Apellidos;
     private String cod;
     private String dni;
+    private int edad;
 
     public Persona() {
     }
@@ -25,11 +26,12 @@ public class Persona
         this.cod = cod;
     }
 
-    public Persona(String Nombre, String Apellidos, String cod, String dni) {
+    public Persona(String Nombre, String Apellidos, String cod, String dni, int edad) {
         this.Nombre = Nombre;
         this.Apellidos = Apellidos;
         this.cod = cod;
         this.dni = dni;
+        this.edad = edad;
     }
 
     public String getNombre() {
@@ -79,11 +81,26 @@ public class Persona
     {
         return setDni(Integer.toString(dni));
     }
+    public String getedad() {
+        return cod;
+    }
 
-    
+    public void setedad(int edad) 
+    {
+        if (edad >=0 && edad<100) 
+        {
+            this.edad=edad;
+        }
+        else
+        {
+            System.out.println("EDAD INVALIDA");
+            return ;
+        }
+    }
+
     public void VerDatos()
     {
-        System.out.println("Nombre: "+this.Nombre+" APELLIDO: "+this.Apellidos+ " CODIGO: "+this.cod+" DNI: "+this.dni);
+        System.out.println("Nombre: "+this.Nombre+" APELLIDO: "+this.Apellidos+ " CODIGO: "+this.cod+" DNI: "+this.dni+" EDAD: "+this.edad);
         System.out.println("");
     }  
     
