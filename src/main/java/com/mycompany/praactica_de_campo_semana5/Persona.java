@@ -1,3 +1,4 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -82,8 +83,6 @@ public class Persona
     
     public void VerDatos()
     {
-        
-        System.out.println("********PERSONAL********");
         System.out.println("Nombre: "+this.Nombre+" APELLIDO: "+this.Apellidos+ " CODIGO: "+this.cod+" DNI: "+this.dni);
         System.out.println("");
     }  

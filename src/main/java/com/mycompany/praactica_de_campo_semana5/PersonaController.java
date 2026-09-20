@@ -19,9 +19,9 @@ public class PersonaController
         lista_persona.add(nuevaPersona);
     }
     
-    void listar_alumno()
+    void lista_persona()
     {
-        System.out.println("Los alumnos de la lista son: ");
+        System.out.println("*******PERSONAS REGISTRADAS*******");
         Persona  actual;
         for (int i = 0; i < lista_persona.size(); i++) {
             actual=lista_persona.get(i);

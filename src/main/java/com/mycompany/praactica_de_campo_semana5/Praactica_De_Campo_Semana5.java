@@ -4,6 +4,8 @@
 
 package com.mycompany.praactica_de_campo_semana5;
 
+import java.util.Scanner;
+
 /**
  *
  * @author leore
@@ -12,18 +14,36 @@ public class Praactica_De_Campo_Semana5 {
 
     public static void main(String[] args) 
     {
+        Scanner sc = new Scanner(System.in);
+        String rpta="s";
+        PersonaController controla = new  PersonaController();
         System.out.println("*****RESGISTRO DE PERSONAS*****");
-        Persona p = new Persona();
-        p.VerDatos();
-        
-        Persona p1= new Persona("Leonardo","Chavez","12121212");
-        p1.VerDatos();
 
-        Persona p2 =new  Persona("Fabiana","Valencia","90901912","90909090");
-        p2.VerDatos();
+        while (rpta.equals("s"))
+        {
+            
+            Persona p = new  Persona();
+            System.out.println("INGRESE NOMBRE DE PERSONA: ");
+            String nom = sc.nextLine();
+            p.setNombre(nom);
 
+            System.out.println("INGRESE APELLIDO: ");
+            String Ap = sc.nextLine();
+            p.setApellidos(Ap);
 
-
+            System.out.println("INRGESE CÓDIGO: ");
+            String cod=sc.nextLine();
+            p.setCod(cod);
+            
+            System.out.println("INGRESE DNI: ");
+            String dni =sc.nextLine();
+            p.setDni(dni);
+           
+            controla.agregar_persona(p);
+            System.out.println("DESEA AÑADIR MÁS TRABAJADORES?");
+            rpta=sc.nextLine();
+        }
+        controla.lista_persona();
         
     }
 }
