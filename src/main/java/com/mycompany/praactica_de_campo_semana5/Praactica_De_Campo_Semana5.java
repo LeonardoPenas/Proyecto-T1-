@@ -1,3 +1,4 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
@@ -11,9 +12,6 @@ import java.util.Scanner;
  * @author leore
  */
 public class Praactica_De_Campo_Semana5 {
-
-
-
 
     public static void main(String[] args) 
     {
@@ -79,6 +77,7 @@ public class Praactica_De_Campo_Semana5 {
             
         }
         controla.lista_persona();
+
 
     }
 }
