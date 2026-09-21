@@ -16,6 +16,7 @@ public class Persona
     private String cod;
     private String dni;
     private int edad;
+    private Direccion direccion;
 
     public Persona() {
     }
@@ -98,10 +99,27 @@ public class Persona
         }
     }
 
+    public Direccion getDireccion()
+    {
+        return direccion;
+    }
+    public void setDireccion(Direccion direccion)
+    {
+        this.direccion = direccion;
+    }
+    
+
+
     public void VerDatos()
     {
         System.out.println("Nombre: "+this.Nombre+" APELLIDO: "+this.Apellidos+ " CODIGO: "+this.cod+" DNI: "+this.dni+" EDAD: "+this.edad);
         System.out.println("");
+        System.out.println("Direccion:");
+        this.direccion.VerDireccion();
+        System.out.println("");
     }  
     
+    }  
+    
+
 }

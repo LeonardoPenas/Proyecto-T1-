@@ -3,6 +3,7 @@
  */
 
 package com.mycompany.praactica_de_campo_semana5;
+import java.util.Scanner;
 
 import java.util.Scanner;
 
@@ -12,12 +13,16 @@ import java.util.Scanner;
  */
 public class Praactica_De_Campo_Semana5 {
 
+
+
+
     public static void main(String[] args) 
     {
         Scanner sc = new Scanner(System.in);
         String rpta="s";
         PersonaController controla = new  PersonaController();
         System.out.println("*****RESGISTRO DE PERSONAS*****");
+
 
         while (rpta.equals("s"))
         {
@@ -49,16 +54,32 @@ public class Praactica_De_Campo_Semana5 {
             } catch (NumberFormatException e) {
                 System.out.println("ERROR: la edad debe ser un numero entero");
             }
+
+            System.out.println("Direccion");
+            System.out.println("Ingrese calle");
+            String calle = sc.nextLine();
+            System.out.println("Ingrese ciudad");
+            String ciudad = sc.nextLine();
+            System.out.println("Ingrese distrito");
+            String distrito = sc.nextLine();
+            Direccion d = new Direccion(calle,ciudad,distrito);
+            p.setDireccion(d);
+            controla.agregar_persona(p);
+              
+
            
-            controla.agregar_persona(p);   
+              
+
             } catch (IllegalArgumentException e) {
                 System.out.println("ERROR: " + e.getMessage());
                 System.out.println("La persona NO fue registrada");
             }
             System.out.println("DESEA AÑADIR MÁS TRABAJADORES?");
             rpta=sc.nextLine();
+
+            
         }
         controla.lista_persona();
-        
+
     }
 }
