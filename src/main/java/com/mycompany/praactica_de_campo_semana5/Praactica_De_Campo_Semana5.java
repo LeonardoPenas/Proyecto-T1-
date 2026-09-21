@@ -3,7 +3,6 @@
  */
 
 package com.mycompany.praactica_de_campo_semana5;
-import java.util.Scanner;
 
 import java.util.Scanner;
 
